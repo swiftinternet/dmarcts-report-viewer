@@ -46,6 +46,7 @@ function get_status_color($row) {
     return $status;
 }
 
+
 function format_date($date, $format) {
     $answer = date($format, strtotime($date));
     return $answer;
@@ -57,7 +58,7 @@ function tmpl_reportList($allowed_reports, $host_lookup = 1, $sort_order, $dom_s
     $reportlist[] = "<!-- Start of report list -->";
 
     $reportlist[] = "<h1 class='main'>DMARC Reports" . ($dom_select == '' ? '' : " for " . htmlentities($dom_select)) . "</h1>";
-    $reportlist[] = "<table class='table reportlist'>";
+    $reportlist[] = "<table class='table-dark reportlist'>";
     $reportlist[] = "  <thead>";
     $reportlist[] = "    <tr>";
     $reportlist[] = "      <th></th>";
@@ -124,7 +125,7 @@ function tmpl_reportData($reportnumber, $allowed_reports, $host_lookup = 1, $sor
         return "Unknown report number!";
     }
 
-    $reportdata[] = "<table class='table reportdata'>";
+    $reportdata[] = "<table class='table-dark reportdata'>";
     $reportdata[] = "  <thead>";
     $reportdata[] = "    <tr>";
     $reportdata[] = "      <th>IP Address</th>";
@@ -211,6 +212,7 @@ function tmpl_page ($body, $reportid, $host_lookup = 1, $sort_order, $dom_select
     $html[] = "  </head>";
 
     $html[] = "  <body>";
+    $html[] = "  <div class='container'>";
 
 
   # optionblock form
@@ -307,7 +309,7 @@ function tmpl_page ($body, $reportid, $host_lookup = 1, $sort_order, $dom_select
 
   # footter
   #--------------------------------------------------------------------------
-    $html[] = "  <div class='footer'>Brought to you by <a href='http://www.techsneeze.com'>TechSneeze.com</a> - <a href='mailto:dave@techsneeze.com'>dave@techsneeze.com</a></div>";
+    $html[] = "  </div>";
     $html[] = "  </body>";
     $html[] = "</html>";
 

@@ -49,19 +49,19 @@ table.reportdata tr th, table.reportdata tr td {
 }
 
 table.reportdata tr.red {
-	background-color: #FF0000;
+	color: #FF0000;
 }
 
 table.reportdata tr.orange {
-	background-color: #FFA500;
+	color: #FFA500;
 }
 
 table.reportdata tr.lime {
-	background-color: #00FF00;
+	color: #00FF00;
 }
 
 table.reportdata tr.yellow {
-	background-color: #FFFF00;
+	color: #FFFF00;
 }
 
 .footer {
